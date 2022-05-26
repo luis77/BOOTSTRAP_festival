@@ -1,0 +1,163 @@
+body{
+	font-family: 'Montserrat', sans-serif;
+}
+.bg-danger{
+	background-color: #f53756!important;
+}
+.bg-success{
+	background-color: #4cb8b3!important;
+}
+.bg-warning{
+	background-color: #fef46d!important;
+}
+.bg-secondary{
+	background-color: #752f97!important;
+}
+
+/*navegacion*/
+.fixed-top {
+	transition: all .3s ease;
+}
+
+.fixed-top.bg-success { /*cuando están presentes las dos clases*/
+    -webkit-box-shadow: 0px 5px 19px -5px rgba(0,0,0,0.44);
+    -moz-box-shadow: 0px 5px 19px -5px rgba(0,0,0,0.44);
+    box-shadow: 0px 5px 19px -5px rgba(0,0,0,0.44);
+}
+.fixed-top .nav-link {
+	color: white!important;
+}
+.fixed-top .active {
+	background-color: #752f97!important;
+}
+.navbar-brand{
+	font-size: 1.8rem;
+	font-weight: 400;
+}
+.navbar-brand span{
+	font-weight: 700;
+}
+a.text-light:hover{
+	color: white!important;
+}
+
+/*video header*/
+.embed-responsive{
+	position: relative;/*para colocar el texto sobre el video*/
+	background-image: url(../img/banda.jpg);
+	height: 50rem;
+	background-position: center center;
+}
+@media(min-width: 992px){
+	.embed-responsive{
+		background-image: unset;/*para remover la imagen en tamaños grandes*/
+		height: auto; /*para mostrar de nuevo el video ampliado*/
+	}
+}
+/*https://www.colorzilla.com/gradient-editor/*/
+.embed-responsive::after {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    content:'';
+    display: block;
+    top: 0;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a90329+0,000000+51,6b6b6b+100&0.7+0,0.7+100 */
+    background: -moz-linear-gradient(-45deg, rgba(169,3,41,0.7) 0%, rgba(0,0,0,0.7) 51%, rgba(107,107,107,0.7) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(169,3,41,0.7) 0%,rgba(0,0,0,0.7) 51%,rgba(107,107,107,0.7) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(169,3,41,0.7) 0%,rgba(0,0,0,0.7) 51%,rgba(107,107,107,0.7) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3a90329', endColorstr='#b36b6b6b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.informacion-concierto{
+	position: absolute;
+	top: 20%;
+	z-index: 100;
+}
+
+@media(min-width: 992px){
+	.informacion-concierto{
+		top: 35%;
+	}
+}
+.informacion-concierto h1{
+	font-size: 3rem;
+	line-height: 6rem;
+}
+@media(min-width: 992px){
+	.informacion-concierto h1{
+		font-size: 4rem;
+		line-height: unset;
+	}
+}
+
+.informacion-concierto h1 span,
+.informacion-concierto p{
+	font-weight: 700;
+	/*https://www.cssmatic.com/box-shadow*/
+    -webkit-box-shadow: 0px 17px 24px -13px rgba(0,0,0,0.34);
+    -moz-box-shadow: 0px 17px 24px -13px rgba(0,0,0,0.34);
+    box-shadow: 0px 17px 24px -13px rgba(0,0,0,0.34);
+}
+.informacion-concierto p{
+	font-size: 2rem;
+}
+.informacion-concierto .text-dark,
+.sobre-festival .text-dark{
+	color: #f53756!important;
+	font-weight: 700;
+}
+
+/*lineup*/
+.separador::after{
+	content: '';
+	display: block;
+	height: 120px;
+	width: 300px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 120px;
+	margin: 0 auto;/*me va a permitir el magin 0 auto porque ya le di un display block*/
+}
+
+.rock::after{
+	background-image: url(../img/guitarra.png);
+}
+.dj::after{
+	background-image: url(../img/dj.png);
+}
+.horario.bg-warning li:nth-child(2n+2){
+	/*nth-child es para seleccionar un elememto si y otro no*/
+	/*se debe pensar (2n+2) como una formula, donde el primer n va a ser cero, 2x0+1=1*/
+	/*dicha formula se puede cambiar*/
+	background-color: #eae05b!important;
+}
+.horario.bg-success li:nth-child(2n+2){
+	/*nth-child es para seleccionar un elememto si y otro no*/
+	/*se debe pensar (2n+2) como una formula, donde el primer n va a ser cero, 2x0+1=1*/
+	/*dicha formula se puede cambiar*/
+	background-color: #3ca8a2!important;
+}
+/*Fecha*/
+.fecha{
+	font-size: 2.8rem;
+}
+.fecha span{
+	font-weight: 700;
+}
+.fecha span::before{
+	content: '-';
+}
+.fecha span:first-child::before{
+	display: none;/*para que el primer span no tenga el '-'*/
+}
+/*Boletos*/
+.boletos .precio {
+	font-size: 2rem;
+}
+.boletos .active{
+	background-color: #752f97!important;
+	border-color: #752f97!important;
+}
+.list-group-item-success{
+	background-color: #4cb8b3!important;
+}
